@@ -1,0 +1,111 @@
+:root {
+  --text-color-darck: #000000;
+  --text-color-white: #ffff;
+  --button-bg: linear-gradient(90.03deg, #00c5eb -1.97%, #b544fe 89.43%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color-darck);
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.title {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+.container {
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 320px;
+  }
+}
+
+@media screnn and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* ====Header=== */
+
+.header {
+  width: 100%;
+  max-width: 320px;
+  height: 82px;
+  padding-top: 20px;
+  background-color: #06071b;
+}
+
+.header-wrap {
+  width: 100%;
+  height: 62px;
+  display: flex;
+  padding: 14px 20px;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    90.03deg,
+    rgba(0, 197, 235, 0.3) -1.97%,
+    rgba(181, 68, 254, 0.3) 89.43%
+  );
+}
+
+.logo {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.mob-menu-open {
+  border: none;
+  padding: 0;
+  height: 24px;
+  cursor: pointer;
+  background: transparent;
+}
+
+.mob-menu-button-icon {
+  fill: #ffffff;
+}
+
+/* ===Header end=== */
+/* ===Hero=== */
+
+.hero {
+  width: 100%;
+  height: 486px;
+  padding-top: 100px;
+  padding-bottom: 127px;
+
+  background-color: #06071b;
+  background-image: url(../img/iphone_hero_mob.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
