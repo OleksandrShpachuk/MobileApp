@@ -2,6 +2,7 @@
   --text-color-darck: #000000;
   --text-color-white: #ffff;
   --button-bg: linear-gradient(90.03deg, #00c5eb -1.97%, #b544fe 89.43%);
+  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 body {
@@ -39,9 +40,7 @@ body {
 
 @media screen and (max-width: 767px) {
   .container {
-    padding-left: 32px;
-    padding-right: 32px;
-    max-width: 320px;
+    max-width: 428px;
   }
 }
 
@@ -55,7 +54,8 @@ body {
 
 .header {
   width: 100%;
-  max-width: 320px;
+  max-width: 428px;
+  margin: auto;
   height: 82px;
   padding-top: 20px;
   background-color: #06071b;
@@ -95,17 +95,245 @@ body {
   fill: #ffffff;
 }
 
+@media screen and (max-width: 767px) {
+  .nav-menu-list {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    width: 100%;
+    max-width: 768px;
+  }
+
+  .header-wrap {
+    justify-content: unset;
+    padding: 14px 32px;
+  }
+
+  .mob-menu-open {
+    display: none;
+  }
+
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-menu-list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .nav-menu-link {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.25;
+    color: #ffffff;
+
+    transition: color var(--transition);
+  }
+
+  .nav-menu-link:hover,
+  .nav-menu-link:focus {
+    background-image: linear-gradient(90.03deg, #00c5eb -1.97%, #b544fe 89.43%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .header {
+    width: 100%;
+    max-width: 1280px;
+    height: 98px;
+    padding-top: 26px;
+  }
+
+  .header-wrap {
+    padding: 16px 19px;
+    height: 72px;
+  }
+}
+
 /* ===Header end=== */
 /* ===Hero=== */
 
 .hero {
   width: 100%;
+  max-width: 428px;
   height: 486px;
+  margin: auto;
   padding-top: 100px;
   padding-bottom: 127px;
 
   background-color: #06071b;
   background-image: url(../img/iphone_hero_mob.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
+}
+
+.hero-wrap {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.hero-title {
+  width: 266px;
+  margin-top: 0;
+  margin-bottom: 12px;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-text {
+  width: 100%;
+  max-width: 241px;
+  margin-top: 0;
+  margin-bottom: 28px;
+  text-align: left;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+.hero-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 0;
+  margin-bottom: 40px;
+}
+
+.hero-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.hero-item-svg {
+  margin-right: 4px;
+}
+
+.hero-item-text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.25;
+  color: #ffffff;
+}
+
+.hero-button {
+  width: 200px;
+  height: 42px;
+  padding-top: 12px;
+  padding-bottom: 11px;
+  padding-right: 60px;
+  padding-left: 61px;
+  cursor: pointer;
+
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(90.03deg, #00c5eb -1.97%, #b544fe 89.43%);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.18;
+  color: #ffffff;
+  transition: background var(--transition);
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background: linear-gradient(90.03deg, #b544fe -1.97%, #00c5eb 89.43%);
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: 498px;
+    margin: auto;
+    padding-top: 60px;
+    padding-bottom: 143px;
+
+    background-color: #06071b;
+    background-image: none;
+  }
+
+  .hero-wrap {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-title {
+    margin-bottom: 12px;
+    width: 450px;
+
+    font-weight: 700;
+    font-size: 40px;
+  }
+
+  .hero-text {
+    margin-bottom: 28px;
+    max-width: 350px;
+
+    font-size: 20px;
+  }
+
+  .hero-item-text {
+    font-size: 14px;
+  }
+
+  .hero-list {
+    width: 400px;
+    gap: 12px 0;
+    margin-bottom: 62px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 1280px;
+    height: 586px;
+    padding-top: 145px;
+    padding-bottom: 146px;
+  }
+
+  .hero-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/* ====Hero end==== */
+/* ====Key Features==== */
+
+.key-features {
+  width: 100%;
+  max-width: 428px;
+  height: 1529px;
+  margin: auto;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  background-image: url(../img/key_features_grad.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
